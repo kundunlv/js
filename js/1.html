@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+<table id="container">
+  <tr>
+    <td>Это</td>
+    <td>Все</td>
+    <td>Элементы DOM</td>
+  </tr>
+</table>
+
+<ol id="ol">
+  <li>Вася</li>
+  <li>Петя</li>
+  <li>Маша</li>
+  <li>Даша</li>
+</ol>
+
+<ul>
+  odin
+  <ul>
+    dva
+    <ol>dva.oidin</ol>
+    <ol>dva.dva</ol>
+  </ul>
+</ul>
+
+<script type="text/javascript">
+
+var test = {a: 1}
+var data = {
+  "Рыбы": {
+    "Форель": {},
+    "Щука": {}
+  },
+
+  "Деревья": {
+    "Хвойные": {
+      "Лиственница": {},
+      "Ель": {}
+    },
+    "Цветковые": {
+      "Берёза": {},
+      "Тополь": {}
+    }
+  }
+};
+
+var container = document.getElementById('container');
+var dataHtml = '';
+
+function countRec(obj){
+  var counter = 0;
+  for (key in obj){
+    counter++
+  } return counter;
+};
+
+function wrapUl(text){
+  return '<ul>' + text + '</ul>'
+};
+
+function wrapOl(text){
+  return '<ol>' + text + '<ol>'
+};
+
+function expand(obj) {
+  for (key in obj) {
+    var cr = countRec(obj[key]);
+    if (cr > 0){
+      dataHtml += wrapUl(key);
+      expand(obj[key])
+      } else {
+        dataHtml += wrapOl(key);
+      }
+  } return dataHtml;
+};
+
+
+</script>
+
+</body>
+
+</html>

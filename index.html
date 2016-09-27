@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- JQuery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Callouts CSS-->
+<link rel="stylesheet" type="text/css" href="css/callouts.css">
+
+</head>
+
+
+<body>
+
+
+
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+</ol>
+
+    <div class="col-lg-6">
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="margin: 10px">
+    <li role="presentation" class="active"><a href="#Vijener" aria-controls="home" role="tab" data-toggle="tab">Vijener</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="Vijener">
+
+      <div class="contaner" style="margin: 10px">
+        <div class="bs-callout"><strong>Шифр Цезаря</strong> — это вид шифра подстановки, в котором каждый символ в открытом тексте заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее.</div>
+
+        <div class="container"  style="margin-left: -15px">
+        <div class="row">
+        <div class="col-xs-3">
+          <div class="input-group">
+            <span class="input-group-addon">Смещение</span>
+            <input type="text" class="form-control" id="cezar-shift">
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-info active">
+              <input type="radio" name="options" id="cezar-crypt" autocomplete="off" checked> Зашифровать
+            </label>
+            <label class="btn btn-info">
+              <input type="radio" name="options" autocomplete="off"> Расшифровать
+            </label>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="margin-top: 5px">
+        <div class="col-xs-7">
+          <div class="input-group">
+            <input type="text" id="cezar-text" class="form-control" placeholder="Текст">
+            <span class="input-group-btn">
+            <button id="cezar-btn" class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+        </div> 
+        </div>
+        <div class="well" id="cezar-result" style="margin-top: 10px">
+          Здесь будет результат
+        </div>
+        </div>
+      </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
+</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
